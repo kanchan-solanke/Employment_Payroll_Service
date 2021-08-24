@@ -49,3 +49,10 @@ select max(salary)
 from employee_payroll
 where gender ='F' group by gender;
 select * from employee_payroll;
+
+>
+alter table employee_payroll add phone_number varchar(50) after name;
+alter table employee_payroll add address varchar(50) after phone_number;
+alter table employee_payroll add Department varchar(50) after address;
+describe employee_payroll;
+select * from employee_payroll;
