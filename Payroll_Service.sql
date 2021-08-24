@@ -12,3 +12,7 @@ insert into employee_payroll
 values(1,'Raj', '10000','21-03-2020'),
 (2,'Meher','20000','2-05-2020'),
 (3,'Rahul','30000','6-07-2021');
+
+>
+use payroll_Service;
+select * from employee_payroll;
