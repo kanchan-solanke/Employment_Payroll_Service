@@ -56,3 +56,10 @@ alter table employee_payroll add address varchar(50) after phone_number;
 alter table employee_payroll add Department varchar(50) after address;
 describe employee_payroll;
 select * from employee_payroll;
+
+>
+alter table employee_payroll rename column salary to basic_pay;
+alter table  employee_payroll add deduction double not null after basic_pay;
+alter table  employee_payroll add taxable_pay double not null after deduction;
+alter table  employee_payroll add tax double not null after taxable_pay;
+describe employee_payroll;
