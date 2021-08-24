@@ -24,3 +24,9 @@ Select salary from employee_payroll
 where name='Bill';
 select start_date from employee_payroll
 where start_date between cast('01-01-2018' As date)  and date(NOW());
+
+>
+use payroll_Service;
+alter table employee_payroll add gender varchar(10) after name;
+update employee_payroll set gender  = 'M' where name='Raj';
+select * from employee_payroll;
