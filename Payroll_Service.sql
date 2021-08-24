@@ -16,3 +16,11 @@ values(1,'Raj', '10000','21-03-2020'),
 >
 use payroll_Service;
 select * from employee_payroll;
+
+>
+insert into employee_payroll
+values(4,'Bill','40000','01-01-2018');
+Select salary from employee_payroll
+where name='Bill';
+select start_date from employee_payroll
+where start_date between cast('01-01-2018' As date)  and date(NOW());
