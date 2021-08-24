@@ -30,3 +30,22 @@ use payroll_Service;
 alter table employee_payroll add gender varchar(10) after name;
 update employee_payroll set gender  = 'M' where name='Raj';
 select * from employee_payroll;
+
+>
+use payroll_Service;
+select sum(salary)
+from employee_payroll
+where gender ='F' group by gender;
+select avg(salary)
+from employee_payroll
+where gender ='F' group by gender;
+select min(salary)
+from employee_payroll
+where gender ='F' group by gender;
+select count(salary)
+from employee_payroll
+where gender ='F' group by gender;
+select max(salary)
+from employee_payroll
+where gender ='F' group by gender;
+select * from employee_payroll;
